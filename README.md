@@ -40,6 +40,7 @@ services:
       - MONITOR=all                                 # (Required) Monitor Type (all, future, missing, existing, firstSeason, latestSeason, pilot) ALL IS RECOMMENDED, OTHER FLAGS MAY BE BROKEN
       - RETRY=True                                  # (Optional) If False, will write failed shows to ignore file to ignore next time. If True, will not ignore anything. If set to 'manual', will ignore entries in ignore, but not add more.
       - INTERVAL=3600                               # Interval in seconds to run the script on (this will run it every hour)
+      - LOGGING=False                               # Can be set to Info, Debug, or False. False will not log anything, Info will log basic info, and Debug will log everything
       - SONARRIMPORTER=True                         # (Optional) If True, will host a webpage to import shows into Sonarr from a custom import list (only available in V4) rather than directly adding shows to sonarr via the API
     volumes:
       - '/etc/localtime:/etc/localtime:ro'
